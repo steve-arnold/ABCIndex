@@ -66,8 +66,8 @@ INT WINAPI WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, _
 	return (int)msg.wParam;
 }
 
-ABCIndex::ABCIndex(HWND hwnd)
-	: m_seEditor(hwnd, 0, FALSE), // scite edit window
+ABCIndex::ABCIndex(HWND hwnd): 
+	m_seEditor(hwnd, 0, FALSE), // scite edit window
 	m_bClose(hwnd, IDOK),
 	m_bLoad(hwnd, IDC_LOAD),
 	m_bScan(hwnd, IDC_SCAN),
